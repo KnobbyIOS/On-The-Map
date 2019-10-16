@@ -42,6 +42,7 @@ class DataClient: NSObject {
         let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
             
             func sendError(_ error: String) {
+                print(method,parameters)
                 print(error)
                 let userInfo = [NSLocalizedDescriptionKey : error]
                 completionHandlerForGET(nil, NSError(domain: "taskForGETMethod", code: 1, userInfo: userInfo))
@@ -103,7 +104,7 @@ class DataClient: NSObject {
                 print(error)
                 print(response)
                 let userInfo = [NSLocalizedDescriptionKey : error]
-                completionHandlerForPOST(nil, NSError(domain: "taskForGETMethod", code: 1, userInfo: userInfo))
+                completionHandlerForPOST(nil, NSError(domain: "taskForPOSTMethod", code: 1, userInfo: userInfo))
             }
             guard (error == nil) else {
                 sendError("There was an error with your request: \(error!)")
@@ -150,7 +151,7 @@ class DataClient: NSObject {
             func sendError(_ error: String) {
                 print(error)
                 let userInfo = [NSLocalizedDescriptionKey : error]
-                completionHandlerForPUT(nil, NSError(domain: "taskForGETMethod", code: 1, userInfo: userInfo))
+                completionHandlerForPUT(nil, NSError(domain: "taskForPUTMethod", code: 1, userInfo: userInfo))
             }
             guard (error == nil) else {
                 sendError("There was an error with your request: \(error!)")

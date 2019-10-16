@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -180,11 +180,7 @@
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem image="icon_addpin" id="PdY-xb-DOw" userLabel="Add Pin Button">
-                                <connections>
-                                    <segue destination="d3R-Na-U7e" kind="presentation" id="ghk-WA-IqL"/>
-                                </connections>
-                            </barButtonItem>
+                            <barButtonItem image="icon_addpin" id="PdY-xb-DOw" userLabel="Add Pin Button"/>
                             <barButtonItem title="Item" image="icon_refresh" id="umw-r7-oWl" userLabel="Refresh Button"/>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -208,35 +204,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bkT-Ub-iUu">
-                                <rect key="frame" x="69" y="291" width="275" height="260"/>
+                                <rect key="frame" x="69" y="281" width="275" height="280"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_world" translatesAutoresizingMaskIntoConstraints="NO" id="qoH-2u-8N6">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="icon_world" translatesAutoresizingMaskIntoConstraints="NO" id="qoH-2u-8N6">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="67"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6Dh-EW-VCU">
-                                        <rect key="frame" x="0.0" y="83" width="275" height="177"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6Dh-EW-VCU">
+                                        <rect key="frame" x="0.0" y="83" width="275" height="197"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share Your Location and Fav URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZE5-AT-WKy">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Share Your Location and Fav URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZE5-AT-WKy">
                                                 <rect key="frame" x="11" y="0.0" width="253.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l87-8K-Fg8">
-                                                <rect key="frame" x="50" y="35.5" width="175" height="47.5"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l87-8K-Fg8">
+                                                <rect key="frame" x="50" y="35.5" width="175" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUC-Jk-bxU">
-                                                <rect key="frame" x="50" y="98" width="175" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUC-Jk-bxU">
+                                                <rect key="frame" x="50" y="84.5" width="175" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovw-VL-xZe">
-                                                <rect key="frame" x="108" y="147" width="59" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovw-VL-xZe">
+                                                <rect key="frame" x="108" y="133.5" width="59" height="30"/>
                                                 <state key="normal" title="Find Me!"/>
                                                 <connections>
                                                     <action selector="findMeButton:" destination="d3R-Na-U7e" eventType="touchUpInside" id="X82-Gs-VaL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pug-ZE-k01">
+                                                <rect key="frame" x="113.5" y="178.5" width="48" height="18.5"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancelButton:" destination="d3R-Na-U7e" eventType="touchUpInside" id="Es3-cH-EOS"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -249,7 +252,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="260" id="dHf-X3-uG7"/>
+                                    <constraint firstAttribute="height" constant="280" id="dHf-X3-uG7"/>
                                     <constraint firstAttribute="width" constant="275" id="tNW-iR-4Ce"/>
                                 </constraints>
                             </stackView>
@@ -258,10 +261,10 @@
                         <constraints>
                             <constraint firstItem="bkT-Ub-iUu" firstAttribute="centerX" secondItem="5Eo-mJ-f7O" secondAttribute="centerX" id="64C-z3-rHL"/>
                             <constraint firstItem="bkT-Ub-iUu" firstAttribute="centerY" secondItem="5Eo-mJ-f7O" secondAttribute="centerY" id="HaW-dY-yQP"/>
-                            <constraint firstItem="bkT-Ub-iUu" firstAttribute="leading" secondItem="78s-as-2jH" secondAttribute="leading" constant="69" id="ViY-95-feL"/>
-                            <constraint firstItem="78s-as-2jH" firstAttribute="trailing" secondItem="bkT-Ub-iUu" secondAttribute="trailing" constant="69" id="jBf-pS-PvV"/>
+                            <constraint firstItem="bkT-Ub-iUu" firstAttribute="leading" secondItem="5Eo-mJ-f7O" secondAttribute="leading" constant="69" id="ViY-95-feL"/>
+                            <constraint firstAttribute="trailing" secondItem="bkT-Ub-iUu" secondAttribute="trailing" constant="69" id="jBf-pS-PvV"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="78s-as-2jH"/>
+                        <viewLayoutGuide key="safeArea" id="BLX-EY-BCX"/>
                     </view>
                     <navigationItem key="navigationItem" id="kkm-Qy-CTi"/>
                     <connections>
@@ -304,7 +307,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wy4-WA-YXW"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ExW-3x-ciV"/>
+                    <navigationItem key="navigationItem" id="Nu1-4x-4E7"/>
                     <connections>
                         <outlet property="mapView" destination="ESj-ui-PPo" id="YVg-vR-Pc9"/>
                     </connections>
@@ -398,7 +401,4 @@
         <image name="icon_world" width="52" height="67"/>
         <image name="logo-u" width="62" height="62"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="fSB-s9-dG3"/>
-    </inferredMetricsTieBreakers>
 </document>

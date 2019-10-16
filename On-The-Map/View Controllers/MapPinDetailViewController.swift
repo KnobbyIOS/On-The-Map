@@ -44,7 +44,9 @@ class MapPinDetailViewController: BaseMapViewController {
     }
     
     private func showStudentLocations(location: StudentLocationDetails) {
-        mapView.removeAnnotation(mapView.annotations as! MKAnnotation)
+        print("The location is:")
+        print(location)
+            //mapView.removeAnnotation(mapView.annotations as! MKAnnotation)
         if let studentCoordinate = extractStudentCoordinates(location: location) {
             let annotation = MKPointAnnotation()
             annotation.title = location.locationDetailLabel
@@ -58,15 +60,18 @@ class MapPinDetailViewController: BaseMapViewController {
     
     private func postNewLocaton() {
         if let newLocation = studentDetails {
+            print(newLocation)
             if newLocation.locationID != nil {
                 DataClient.sharedInstance().updateUserLocation(newInformation: newLocation, completionHandler: {(success, error) in
                     print(error?.localizedDescription as Any)
+                    
                 })
             } else {
                 DataClient.sharedInstance().postUserLocation(information: newLocation, completionHandler: {(success, error) in
                     print(error?.localizedDescription as Any)
                 })
             }
+            dismiss(animated: true, completion: nil)
         }
     }
     

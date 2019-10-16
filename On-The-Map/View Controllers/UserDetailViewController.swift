@@ -25,6 +25,9 @@ class UserDetailViewController: UIViewController, UITextFieldDelegate,MKMapViewD
           self.userLocation.delegate =  self
        }
 
+    @IBAction func cancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     @IBAction func findMeButton(_ sender: Any) {
         
         let newLocation = userLocation.text!
@@ -88,7 +91,8 @@ class UserDetailViewController: UIViewController, UITextFieldDelegate,MKMapViewD
         let showNewLocation = storyboard?.instantiateViewController(withIdentifier: "MapPinDetailViewController") as! MapPinDetailViewController
         showNewLocation.studentDetails = buildStudentDetails(coordinate)
         //self.performSegue(withIdentifier: "MapPinDetailViewController", sender: nil)
-        navigationController?.pushViewController(showNewLocation, animated: true)
+        //navigationController?.pushViewController(showNewLocation, animated: true)
+        self.present(showNewLocation, animated: true, completion: nil)
         print("You should see map view")
     }
     
